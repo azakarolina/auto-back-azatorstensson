@@ -17,15 +17,22 @@ describe('Test suite', () => {
     
     it("Delete a client", () => {
         cy.authenticate().then((response => {
-            client.createClientRequest()
+            //client.createClientRequest()
             client.deleteClientRequest(Cypress.env().lastID)
             client.performLogout()
         }))
     })
-    it("Change a clinent", () => {
+    it("Change a client", () => {
         cy.authenticate().then((response => {
             client.changeClientRequest()
             //client.changeClientReturnRequest()
+            client.performLogout()
+        }))
+    })
+    it("Change a client return", () => {
+        cy.authenticate().then((response => {
+            //client.changeClientRequest()
+            client.changeClientReturnRequest()
             client.performLogout()
         }))
     })
@@ -40,7 +47,7 @@ describe('Test suite', () => {
     
     it("Delete a room", () => {
         cy.authenticate().then((response => {
-            room.createRoomRequest()
+            //room.createRoomRequest()
             room.deleteRoomRequest(Cypress.env().lastID)
             room.performLogout()
         }))

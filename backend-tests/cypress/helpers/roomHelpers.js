@@ -9,7 +9,8 @@ function createRoomPayload(){
        // "name":"Client01",
         //"email":"client01@email.com",
         //"telephone":"12312423423423"
-        "CATEGORY": "Double",
+       
+        "CATEGORY": "Double", //Det här kommer inte med i testen och jag förstår inte riktigt varför. har letat i inspectorn efter ledtrådar
         "NUMBER": "3",
         "FLOOR": "3",
         "AVAILABLE": "click",
